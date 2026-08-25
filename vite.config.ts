@@ -7,6 +7,9 @@ const projectRoot = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   plugins: [react()],
+  preview: {
+    allowedHosts: [".trycloudflare.com"]
+  },
   resolve: {
     alias: {
       "@": path.resolve(projectRoot, "src")
